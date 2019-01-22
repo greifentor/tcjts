@@ -28,7 +28,7 @@ public class TimeUnitTest {
 	@Test
 	public void getMillisPerUnit_Returns60Times60ForHOUR() {
 		// Prepare
-		long expected = 60 * 60;
+		long expected = TimeUnit.MINUTE.getUnits() * 60;
 		// Run
 		long returned = TimeUnit.HOUR.getUnits();
 		// Check
@@ -38,7 +38,7 @@ public class TimeUnitTest {
 	@Test
 	public void getMillisPerUnit_Returns60Times60Times8ForDAY() {
 		// Prepare
-		long expected = 60 * 60 * 8;
+		long expected = TimeUnit.MINUTE.getUnits() * 60 * 8;
 		// Run
 		long returned = TimeUnit.DAY.getUnits();
 		// Check
@@ -48,7 +48,7 @@ public class TimeUnitTest {
 	@Test
 	public void getMillisPerUnit_Returns60imes60Times8Times5ForWEEK() {
 		// Prepare
-		long expected = 60 * 60 * 8 * 5;
+		long expected = TimeUnit.MINUTE.getUnits() * 60 * 8 * 5;
 		// Run
 		long returned = TimeUnit.WEEK.getUnits();
 		// Check
