@@ -16,41 +16,41 @@ import org.junit.Test;
 public class TimeUnitTest {
 
 	@Test
-	public void getMillisPerUnit_Returns60000ForMINUTE() {
+	public void getMillisPerUnit_Returns60ForMINUTE() {
 		// Prepare
-		long expected = 60000;
+		long expected = 60;
 		// Run
-		long returned = TimeUnit.MINUTE.getMillisPerUnit();
+		long returned = TimeUnit.MINUTE.getUnits();
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
 
 	@Test
-	public void getMillisPerUnit_Returns60000Times60ForHOUR() {
+	public void getMillisPerUnit_Returns60Times60ForHOUR() {
 		// Prepare
-		long expected = 60000 * 60;
+		long expected = 60 * 60;
 		// Run
-		long returned = TimeUnit.HOUR.getMillisPerUnit();
+		long returned = TimeUnit.HOUR.getUnits();
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
 
 	@Test
-	public void getMillisPerUnit_Returns60000Times60Times8ForDAY() {
+	public void getMillisPerUnit_Returns60Times60Times8ForDAY() {
 		// Prepare
-		long expected = 60000 * 60 * 8;
+		long expected = 60 * 60 * 8;
 		// Run
-		long returned = TimeUnit.DAY.getMillisPerUnit();
+		long returned = TimeUnit.DAY.getUnits();
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
 
 	@Test
-	public void getMillisPerUnit_Returns60000Times60Times8Times5ForWEEK() {
+	public void getMillisPerUnit_Returns60imes60Times8Times5ForWEEK() {
 		// Prepare
-		long expected = 60000 * 60 * 8 * 5;
+		long expected = 60 * 60 * 8 * 5;
 		// Run
-		long returned = TimeUnit.WEEK.getMillisPerUnit();
+		long returned = TimeUnit.WEEK.getUnits();
 		// Check
 		assertThat(returned, equalTo(expected));
 	}

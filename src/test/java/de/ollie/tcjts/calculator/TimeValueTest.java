@@ -14,16 +14,16 @@ import org.junit.Test;
  */
 public class TimeValueTest {
 
-	private static final long MILLIS = 4711;
+	private static final long UNITS = 4711;
 
 	@Test
 	public void construtor_PassMillis_SetsTheMillisCorrectly() {
 		// Prepare
-		long expected = MILLIS;
+		long expected = UNITS;
 		// Run
-		TimeValue testee = new TimeValue(MILLIS);
+		TimeValue testee = new TimeValue(UNITS);
 		// Check
-		long returned = testee.getMillis();
+		long returned = testee.getUnits();
 		assertThat(returned, equalTo(expected));
 	}
 
@@ -37,7 +37,7 @@ public class TimeValueTest {
 		// Prepare
 		boolean expected = false;
 		// Run
-		boolean returned = new TimeValue(MILLIS).equals(null);
+		boolean returned = new TimeValue(UNITS).equals(null);
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
@@ -47,7 +47,7 @@ public class TimeValueTest {
 		// Prepare
 		boolean expected = false;
 		// Run
-		boolean returned = new TimeValue(MILLIS).equals(";op");
+		boolean returned = new TimeValue(UNITS).equals(";op");
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
@@ -57,7 +57,7 @@ public class TimeValueTest {
 		// Prepare
 		boolean expected = false;
 		// Run
-		boolean returned = new TimeValue(MILLIS).equals(new TimeValue(MILLIS - 1));
+		boolean returned = new TimeValue(UNITS).equals(new TimeValue(UNITS - 1));
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
@@ -67,7 +67,7 @@ public class TimeValueTest {
 		// Prepare
 		boolean expected = true;
 		// Run
-		boolean returned = new TimeValue(MILLIS).equals(new TimeValue(MILLIS));
+		boolean returned = new TimeValue(UNITS).equals(new TimeValue(UNITS));
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
@@ -76,7 +76,7 @@ public class TimeValueTest {
 	public void equals_PassSameObject_ReturnsTrue() {
 		// Prepare
 		boolean expected = true;
-		TimeValue value = new TimeValue(MILLIS);
+		TimeValue value = new TimeValue(UNITS);
 		// Run
 		boolean returned = value.equals(value);
 		// Check
@@ -86,9 +86,9 @@ public class TimeValueTest {
 	@Test
 	public void hashCode_EqualValuesForEqualObjects() {
 		// Prepare
-		int expected = new TimeValue(MILLIS).hashCode();
+		int expected = new TimeValue(UNITS).hashCode();
 		// Run
-		int returned = new TimeValue(MILLIS).hashCode();
+		int returned = new TimeValue(UNITS).hashCode();
 		// Check
 		assertThat(returned, equalTo(expected));
 	}
@@ -96,7 +96,7 @@ public class TimeValueTest {
 	@Test
 	public void hashCode_EqualValuesForSameObject() {
 		// Prepare
-		TimeValue value = new TimeValue(MILLIS);
+		TimeValue value = new TimeValue(UNITS);
 		int expected = value.hashCode();
 		// Run
 		int returned = value.hashCode();
@@ -107,9 +107,9 @@ public class TimeValueTest {
 	@Test
 	public void toString_ReturnsACorrectStringRepresentation() {
 		// Prepare
-		String expected = "TimeValue[millis=" + MILLIS + "]";
+		String expected = "TimeValue[units=" + UNITS + "]";
 		// Run
-		String returned = new TimeValue(MILLIS).toString();
+		String returned = new TimeValue(UNITS).toString();
 		// Check
 		assertThat(returned, equalTo(expected));
 	}

@@ -8,11 +8,10 @@ package de.ollie.tcjts.calculator;
  */
 public enum TimeUnit {
 
-	MINUTE("m", 60000, null), //
+	MINUTE("m", 60, null), //
 	HOUR("h", 60, MINUTE), //
 	DAY("d", 8, HOUR), //
 	WEEK("w", 5, DAY);
-
 	private String identifier = null;
 	private long timesPredecessor = 0;
 	private TimeUnit predecessor = null;
@@ -24,11 +23,11 @@ public enum TimeUnit {
 	}
 
 	/**
-	 * Returns the count of milliseconds for the time unit.
+	 * Returns the count of units for the time unit.
 	 * 
-	 * @return The count of milliseconds for the time unit.
+	 * @return The count of units for the time unit.
 	 */
-	public long getMillisPerUnit() {
+	public long getUnits() {
 		long result = this.timesPredecessor;
 		TimeUnit tu = this;
 		while (tu.predecessor != null) {

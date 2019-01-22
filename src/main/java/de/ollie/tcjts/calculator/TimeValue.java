@@ -15,18 +15,18 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  */
 final public class TimeValue {
 
-	private long millis = 0;
+	private long units = 0;
 
 	/**
 	 * Creates a new times value object with the passed milliseconds.
 	 *
-	 * @param millis The milliseconds for the time value.
+	 * @param units The units for the time value.
 	 * @throws IllegalArgumentException Passing a value less than 0.
 	 */
-	public TimeValue(long millis) {
+	public TimeValue(long units) {
 		super();
-		ensure(millis > -1, "millis cannot be less than zero.");
-		this.millis = millis;
+		ensure(units > -1, "units cannot be less than zero.");
+		this.units = units;
 	}
 
 	@Override
@@ -35,12 +35,12 @@ final public class TimeValue {
 	}
 
 	/**
-	 * Returns the millisecond value of the object.
+	 * Returns the units value of the object.
 	 *
-	 * @return The millisecond value of the object.
+	 * @return The units value of the object.
 	 */
-	public long getMillis() {
-		return this.millis;
+	public long getUnits() {
+		return this.units;
 	}
 
 	@Override
