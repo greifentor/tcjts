@@ -8,13 +8,18 @@ package de.ollie.tcjts.calculator;
  */
 public enum TimeUnit {
 
-	MINUTE("m", 60, null), //
+	MINUTE("m"), //
 	HOUR("h", 60, MINUTE), //
 	DAY("d", 8, HOUR), //
 	WEEK("w", 5, DAY);
 	private String identifier = null;
 	private long timesPredecessor = 0;
 	private TimeUnit predecessor = null;
+
+	private TimeUnit(String identifier) {
+		this.identifier = identifier;
+		this.timesPredecessor = 1;
+	}
 
 	private TimeUnit(String identifier, long timesPrecessor, TimeUnit predecessor) {
 		this.identifier = identifier;

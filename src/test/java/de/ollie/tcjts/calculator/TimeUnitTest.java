@@ -16,9 +16,9 @@ import org.junit.Test;
 public class TimeUnitTest {
 
 	@Test
-	public void getMillisPerUnit_Returns60ForMINUTE() {
+	public void getMillisPerUnit_Returns1ForMINUTE() {
 		// Prepare
-		long expected = 60;
+		long expected = 1;
 		// Run
 		long returned = TimeUnit.MINUTE.getUnits();
 		// Check
@@ -26,7 +26,7 @@ public class TimeUnitTest {
 	}
 
 	@Test
-	public void getMillisPerUnit_Returns60Times60ForHOUR() {
+	public void getMillisPerUnit_Returns60ForHOUR() {
 		// Prepare
 		long expected = TimeUnit.MINUTE.getUnits() * 60;
 		// Run
@@ -36,7 +36,7 @@ public class TimeUnitTest {
 	}
 
 	@Test
-	public void getMillisPerUnit_Returns60Times60Times8ForDAY() {
+	public void getMillisPerUnit_Returns60Times8ForDAY() {
 		// Prepare
 		long expected = TimeUnit.MINUTE.getUnits() * 60 * 8;
 		// Run
@@ -46,7 +46,7 @@ public class TimeUnitTest {
 	}
 
 	@Test
-	public void getMillisPerUnit_Returns60imes60Times8Times5ForWEEK() {
+	public void getMillisPerUnit_Returns60imes8Times5ForWEEK() {
 		// Prepare
 		long expected = TimeUnit.MINUTE.getUnits() * 60 * 8 * 5;
 		// Run
