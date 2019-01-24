@@ -28,6 +28,15 @@ public enum TimeUnit {
 	}
 
 	/**
+	 * Returns the identifier of the time unit.
+	 *
+	 * @return The identifier of the time unit.
+	 */
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	/**
 	 * Returns the count of units for the time unit.
 	 * 
 	 * @return The count of units for the time unit.
@@ -52,7 +61,7 @@ public enum TimeUnit {
 	 */
 	public static TimeUnit getTimeUnit(String identifier) {
 		for (TimeUnit tu : values()) {
-			if (tu.identifier.equalsIgnoreCase(identifier)) {
+			if (tu.getIdentifier().equalsIgnoreCase(identifier)) {
 				return tu;
 			}
 		}
