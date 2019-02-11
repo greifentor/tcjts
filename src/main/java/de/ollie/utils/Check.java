@@ -1,4 +1,4 @@
-package de.ollie.tcjts.util;
+package de.ollie.utils;
 
 /**
  * A utility class for checkers.

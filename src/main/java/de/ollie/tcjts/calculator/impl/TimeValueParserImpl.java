@@ -1,6 +1,6 @@
 package de.ollie.tcjts.calculator.impl;
 
-import static de.ollie.tcjts.util.Check.ensure;
+import static de.ollie.utils.Check.ensure;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
 package de.ollie.tcjts.calculator;
 
-import static de.ollie.tcjts.util.Check.ensure;
+import static de.ollie.utils.Check.ensure;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

@@ -1,6 +1,6 @@
 package de.ollie.tcjts.calculator;
 
-import static de.ollie.tcjts.util.Check.ensure;
+import static de.ollie.utils.Check.ensure;
 
 /**
  * A class which provides methods to create string representations for a TimeValue object.

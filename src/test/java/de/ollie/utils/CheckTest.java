@@ -1,4 +1,4 @@
-package de.ollie.tcjts.util;
+package de.ollie.utils;
 
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThat;
@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.Test;
 
-import de.ollie.tcjts.util.Check;
+import de.ollie.utils.Check;
 
 /**
  * Unit tests for class "Check".
