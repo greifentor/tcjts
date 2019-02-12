@@ -10,9 +10,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import de.ollie.utils.localization.LocalizationManager;
-import de.ollie.utils.localization.SupportedLanguage;
-
 /**
  * Unit tests for class "LocalizationManager".
  *
@@ -45,7 +42,7 @@ public class LocalizationManagerTest {
 		// Run
 		String returned = this.unitUnderTest.getText(RESOURCE_ID_APPLICATION_TITLE, SupportedLanguage.DE);
 		// Check
-		assertThat(returned, equalTo("Kurswahl für die Qualifikationsphase"));
+		assertThat(returned, equalTo("Jira Timestamp Rechner"));
 	}
 
 }
